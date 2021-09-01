@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.junjie.centaurus</groupId>
+    <artifactId>centaurus</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <centaurus-dependencies.version>0.0.1-SNAPSHOT</centaurus-dependencies.version>
+    </properties>
+
+    <modules>
+        <module>centaurus-dependencies</module>
+        <module>centaurus-json</module>
+        <module>centaurus-annotation</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.junjie.centaurus</groupId>
+                <artifactId>centaurus-dependencies</artifactId>
+                <version>${centaurus-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
